@@ -396,6 +396,65 @@ color: white;
 transform: translateY(-2px);
 }
 
+/* Fix Approval Letters Section Mobile View */
+@media (max-width: 768px) {
+    .approval-columns {
+        display: grid;
+        grid-template-columns: 1fr;  /* Single column on mobile */
+        gap: 20px;
+    }
+
+    .approval-column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .pdf-container {
+        height: auto;
+        min-height: 200px;
+        background: #f5f5f5;
+    }
+
+    .pdf-container embed {
+        height: 300px;  /* Fixed height on mobile */
+    }
+
+    .pdf-btn {
+      padding: 8px 8px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: transform 0.3s ease;
+      }
+
+    .approval-info h4 {
+        font-size: 18px;
+        margin: 15px 0;
+    }
+
+    .pdf-actions {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        width: 100%;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    .pdf-container {
+        min-height: 150px;
+    }
+
+    .pdf-container embed {
+        height: 250px;
+    }
+    
+    .pdf-actions {
+        grid-template-columns: 1fr;  /* Stack buttons on very small screens */
+    }
+}
+
 /* Programs Section */
 .programs {
   scroll-margin-top: 100px;
