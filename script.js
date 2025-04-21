@@ -256,7 +256,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const savedLang = localStorage.getItem('preferred_language');
     if (savedLang && savedLang !== 'en') {
         let attempts = 0;
-        const maxAttempts = 3;
+        const maxAttempts = 10;
         
         const tryApplyLanguage = () => {
             if (attempts >= maxAttempts) return;
